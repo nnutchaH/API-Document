@@ -10,14 +10,18 @@ import UIKit
 
 class LoginViewController: UIViewController {
     
+    @IBOutlet weak var loadingView: UIActivityIndicatorView!
+    
     let apiManager = APIManager()
     var loginData: Login?
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        loadingView.isHidden = true
     }
     
     @IBAction func pressedLogin(_ sender: Any) {
+        loadingView.isHidden = false
         apiManager.postLogin { [weak self] loginResponse in
             switch loginResponse {
             case .success(let data):
@@ -25,6 +29,7 @@ class LoginViewController: UIViewController {
             case .failure(let error):
                 print(error)
             }
+            self!.loadingView.isHidden = true
             self!.performSegue(withIdentifier: "showDashboardDetail", sender: nil)
         }
     }

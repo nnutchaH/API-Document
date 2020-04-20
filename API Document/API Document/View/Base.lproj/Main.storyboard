@@ -29,9 +29,19 @@
                                     <action selector="pressedLogin:" destination="BYZ-38-t0r" eventType="touchUpInside" id="PHA-NM-5Jh"/>
                                 </connections>
                             </button>
+                            <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" animating="YES" style="large" translatesAutoresizingMaskIntoConstraints="NO" id="T30-oa-FWh">
+                                <rect key="frame" x="157" y="398" width="100" height="100"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="100" id="DGy-3I-rTQ"/>
+                                    <constraint firstAttribute="height" constant="100" id="FbX-MX-3SF"/>
+                                </constraints>
+                                <color key="color" red="0.2470588235" green="0.2470588235" blue="0.2470588235" alpha="1" colorSpace="calibratedRGB"/>
+                            </activityIndicatorView>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
+                            <constraint firstItem="T30-oa-FWh" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="IUR-52-CbI"/>
+                            <constraint firstItem="T30-oa-FWh" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="OU5-qa-4b4"/>
                             <constraint firstItem="wkr-DP-8PY" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="mL3-gZ-aT6"/>
                             <constraint firstItem="wkr-DP-8PY" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="zli-3u-5cT"/>
                         </constraints>
@@ -39,6 +49,7 @@
                     </view>
                     <navigationItem key="navigationItem" id="Qeb-bz-0ap"/>
                     <connections>
+                        <outlet property="loadingView" destination="T30-oa-FWh" id="xJF-rs-vla"/>
                         <segue destination="dWC-G0-was" kind="show" identifier="showDashboardDetail" id="mzF-4h-Pqi"/>
                     </connections>
                 </viewController>
@@ -65,7 +76,7 @@
                                             <rect key="frame" x="0.0" y="0.0" width="414" height="71"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="ID" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NGo-ye-EaJ">
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="ID" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="9" translatesAutoresizingMaskIntoConstraints="NO" id="NGo-ye-EaJ">
                                                     <rect key="frame" x="12" y="12" width="390" height="21"/>
                                                     <constraints>
                                                         <constraint firstAttribute="height" constant="21" id="0FJ-Zl-62z"/>
