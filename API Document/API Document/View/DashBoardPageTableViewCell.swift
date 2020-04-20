@@ -10,4 +10,11 @@ import UIKit
 
 class DashBoardPageTableViewCell: UITableViewCell {
 
+    @IBOutlet weak var idLabel: UILabel!
+    @IBOutlet weak var nameLabel: UILabel!
+    
+    func setupDashboardPageUI(customer: Customer) {
+        idLabel.text = customer.id
+        nameLabel.text = customer.name
+    }
 }

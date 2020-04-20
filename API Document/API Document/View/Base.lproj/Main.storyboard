@@ -26,7 +26,7 @@
                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
                                 <connections>
-                                    <segue destination="dWC-G0-was" kind="show" id="BsS-LL-Aj5"/>
+                                    <action selector="pressedLogin:" destination="BYZ-38-t0r" eventType="touchUpInside" id="PHA-NM-5Jh"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -38,10 +38,13 @@
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                     <navigationItem key="navigationItem" id="Qeb-bz-0ap"/>
+                    <connections>
+                        <segue destination="dWC-G0-was" kind="show" identifier="showDashboardDetail" id="mzF-4h-Pqi"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1042.0289855072465" y="137.94642857142856"/>
+            <point key="canvasLocation" x="1000" y="138"/>
         </scene>
         <!--Dashboard Page View Controller-->
         <scene sceneID="ETH-RU-oKG">
@@ -55,7 +58,7 @@
                                 <rect key="frame" x="0.0" y="88" width="414" height="774"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="DashBoardPageTableViewCell" rowHeight="71" id="nUN-pw-Sie">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="DashBoardPageTableViewCell" rowHeight="71" id="nUN-pw-Sie" customClass="DashBoardPageTableViewCell" customModule="API_Document" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="28" width="414" height="71"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="nUN-pw-Sie" id="2u3-Lz-HAI">
@@ -92,10 +95,16 @@
                                             </constraints>
                                         </tableViewCellContentView>
                                         <connections>
+                                            <outlet property="idLabel" destination="NGo-ye-EaJ" id="b1h-NN-la6"/>
+                                            <outlet property="nameLabel" destination="vDN-02-Pcp" id="8LN-SS-2PX"/>
                                             <segue destination="Xfl-yU-REc" kind="show" id="pr3-dJ-pDz"/>
                                         </connections>
                                     </tableViewCell>
                                 </prototypes>
+                                <connections>
+                                    <outlet property="dataSource" destination="dWC-G0-was" id="IeC-o0-QSZ"/>
+                                    <outlet property="delegate" destination="dWC-G0-was" id="PHM-5a-rXF"/>
+                                </connections>
                             </tableView>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
@@ -107,6 +116,9 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="402-YK-niZ"/>
                     </view>
+                    <navigationItem key="navigationItem" id="1np-G2-iBq">
+                        <barButtonItem key="rightBarButtonItem" title="Logout" id="Rn9-4W-JVf"/>
+                    </navigationItem>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="yF6-ml-Qjn" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -120,10 +132,10 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <view contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="5FF-5n-pYL">
-                                <rect key="frame" x="20" y="131" width="374" height="183"/>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="5FF-5n-pYL">
+                                <rect key="frame" x="20" y="356.5" width="374" height="183"/>
                                 <subviews>
-                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="9" translatesAutoresizingMaskIntoConstraints="NO" id="aTx-mk-bJ9">
+                                    <stackView opaque="NO" contentMode="scaleToFill" fixedFrame="YES" axis="vertical" spacing="9" translatesAutoresizingMaskIntoConstraints="NO" id="aTx-mk-bJ9">
                                         <rect key="frame" x="25" y="25" width="190" height="109"/>
                                         <subviews>
                                             <stackView opaque="NO" contentMode="scaleToFill" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="CD6-BH-HiK">
@@ -199,17 +211,25 @@
                                 </subviews>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                                 <constraints>
-                                    <constraint firstAttribute="trailing" secondItem="aTx-mk-bJ9" secondAttribute="trailing" constant="25" id="N1A-Ww-NMG"/>
-                                    <constraint firstItem="aTx-mk-bJ9" firstAttribute="leading" secondItem="5FF-5n-pYL" secondAttribute="leading" constant="25" id="TZ8-5B-D9q"/>
-                                    <constraint firstItem="aTx-mk-bJ9" firstAttribute="top" secondItem="5FF-5n-pYL" secondAttribute="top" constant="25" id="nv4-Ew-sty"/>
-                                    <constraint firstAttribute="bottom" secondItem="aTx-mk-bJ9" secondAttribute="bottom" constant="25" id="sRu-iJ-X8w"/>
+                                    <constraint firstAttribute="width" constant="374" id="2ng-TF-H8J"/>
+                                    <constraint firstAttribute="height" constant="183" id="UCd-1T-0zw"/>
                                 </constraints>
                             </view>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="5FF-5n-pYL" firstAttribute="centerX" secondItem="i8d-La-sCu" secondAttribute="centerX" id="JYZ-6Q-Yo0"/>
+                            <constraint firstItem="5FF-5n-pYL" firstAttribute="centerY" secondItem="i8d-La-sCu" secondAttribute="centerY" id="WbO-av-t5o"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="dAd-q3-l0P"/>
                     </view>
                     <navigationItem key="navigationItem" id="PMr-Ee-G5J"/>
+                    <connections>
+                        <outlet property="customerGradeLabel" destination="FYc-fi-fXh" id="ut6-9F-g7q"/>
+                        <outlet property="idLabel" destination="66a-PU-fdP" id="x55-rx-DFR"/>
+                        <outlet property="nameLabel" destination="zTl-nr-V5n" id="SXk-zZ-sgM"/>
+                        <outlet property="sexLabel" destination="yRT-cU-w3T" id="ZiE-Mn-euW"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Qpm-Jy-deS" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
