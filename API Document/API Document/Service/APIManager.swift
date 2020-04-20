@@ -15,6 +15,7 @@ enum APIError: Error {
 }
 
 class APIManager {
+    
     func postLogin(completion: @escaping (Result<Login, APIError>) -> Void) {
         let urlString = "https://neversitup.pythonanywhere.com/login"
         let parameters = [
@@ -36,4 +37,27 @@ class APIManager {
             }
         }
     }
+    
+    func postDetail(token: String, customerId: String, completion: @escaping (Result<Detail, APIError>) -> Void) {
+        let urlString = "https://neversitup.pythonanywhere.com/getCustomerDetail"
+        let parameters = [
+            "token": token,
+            "customerId": customerId
+        ]
+        
+        AF.request(urlString, method: .post, parameters: parameters, encoding: JSONEncoding.default).responseJSON { response in
+            switch response.result {
+            case .success:
+                do{
+                    let data = try JSONDecoder().decode(Detail.self, from: response.data!)
+                    completion(.success(data))
+                }catch{
+                    completion(.failure(APIError.invalidJSON))
+                }
+            case .failure:
+                completion(.failure(APIError.invalidData))
+            }
+        }
+    }
+    
 }
