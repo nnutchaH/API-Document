@@ -1,0 +1,6 @@
+framework module Pods_API_Document_API_DocumentUITests {
+  umbrella header "Pods-API Document-API DocumentUITests-umbrella.h"
+
+  export *
+  module * { export * }
+}
