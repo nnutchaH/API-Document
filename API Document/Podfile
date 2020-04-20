@@ -6,7 +6,8 @@ target 'API Document' do
   use_frameworks!
 
   # Pods for API Document
-  pod 'Alamofire', '~> 5.1'
+  pod 'Alamofire', '~> 5.0' 
+
 
   target 'API DocumentTests' do
     inherit! :search_paths
