@@ -1,5 +1,5 @@
 //
-//  ViewController.swift
+//  DashboardPageViewController.swift
 //  API Document
 //
 //  Created by Pony💛 yyy on 20/4/2563 BE.
@@ -8,13 +8,12 @@
 
 import UIKit
 
-class ViewController: UIViewController {
+class DashboardPageViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view.
     }
+    
 
 
 }
-
