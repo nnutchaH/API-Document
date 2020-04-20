@@ -10,7 +10,6 @@ import UIKit
 
 class DetailPageViewController: UIViewController {
     
-    
     @IBOutlet weak var customerGradeLabel: UILabel!
     @IBOutlet weak var idLabel: UILabel!
     @IBOutlet weak var nameLabel: UILabel!
@@ -44,4 +43,5 @@ class DetailPageViewController: UIViewController {
         nameLabel.text = detailData.data.name
         sexLabel.text = detailData.data.sex
     }
+    
 }

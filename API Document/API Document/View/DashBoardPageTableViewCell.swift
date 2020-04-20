@@ -9,7 +9,7 @@
 import UIKit
 
 class DashBoardPageTableViewCell: UITableViewCell {
-
+    
     @IBOutlet weak var idLabel: UILabel!
     @IBOutlet weak var nameLabel: UILabel!
     
@@ -17,4 +17,5 @@ class DashBoardPageTableViewCell: UITableViewCell {
         idLabel.text = customer.id
         nameLabel.text = customer.name
     }
+    
 }

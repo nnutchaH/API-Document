@@ -13,7 +13,6 @@ struct Detail: Codable {
     let status: Int
 }
 
-// MARK: - DataClass
 struct DataClass: Codable {
     let customerGrade, id: String
     let isCustomerPremium: Bool

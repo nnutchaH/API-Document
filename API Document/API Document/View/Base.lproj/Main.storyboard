@@ -7,10 +7,10 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Login Page View Controller-->
+        <!--Login View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" userLabel="Login Page View Controller" customClass="LoginViewController" customModule="API_Document" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="LoginViewController" customModule="API_Document" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -66,7 +66,7 @@
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="ID" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NGo-ye-EaJ">
-                                                    <rect key="frame" x="20" y="12" width="374" height="21"/>
+                                                    <rect key="frame" x="12" y="12" width="390" height="21"/>
                                                     <constraints>
                                                         <constraint firstAttribute="height" constant="21" id="0FJ-Zl-62z"/>
                                                     </constraints>
@@ -75,7 +75,7 @@
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vDN-02-Pcp">
-                                                    <rect key="frame" x="20" y="38" width="374" height="21"/>
+                                                    <rect key="frame" x="12" y="38" width="390" height="21"/>
                                                     <constraints>
                                                         <constraint firstAttribute="height" constant="21" id="lSi-V4-2SY"/>
                                                     </constraints>
@@ -87,10 +87,10 @@
                                             <constraints>
                                                 <constraint firstAttribute="bottom" secondItem="vDN-02-Pcp" secondAttribute="bottom" constant="12" id="2L4-Fr-VK4"/>
                                                 <constraint firstItem="NGo-ye-EaJ" firstAttribute="top" secondItem="2u3-Lz-HAI" secondAttribute="top" constant="12" id="VD6-I3-WmQ"/>
-                                                <constraint firstItem="NGo-ye-EaJ" firstAttribute="leading" secondItem="2u3-Lz-HAI" secondAttribute="leading" constant="20" id="dcl-fS-bMN"/>
-                                                <constraint firstAttribute="trailing" secondItem="NGo-ye-EaJ" secondAttribute="trailing" constant="20" id="egX-on-QBY"/>
-                                                <constraint firstItem="vDN-02-Pcp" firstAttribute="leading" secondItem="2u3-Lz-HAI" secondAttribute="leading" constant="20" id="jEs-PF-fVp"/>
-                                                <constraint firstAttribute="trailing" secondItem="vDN-02-Pcp" secondAttribute="trailing" constant="20" id="rTe-yh-ZiX"/>
+                                                <constraint firstItem="NGo-ye-EaJ" firstAttribute="leading" secondItem="2u3-Lz-HAI" secondAttribute="leading" constant="12" id="dcl-fS-bMN"/>
+                                                <constraint firstAttribute="trailing" secondItem="NGo-ye-EaJ" secondAttribute="trailing" constant="12" id="egX-on-QBY"/>
+                                                <constraint firstItem="vDN-02-Pcp" firstAttribute="leading" secondItem="2u3-Lz-HAI" secondAttribute="leading" constant="12" id="jEs-PF-fVp"/>
+                                                <constraint firstAttribute="trailing" secondItem="vDN-02-Pcp" secondAttribute="trailing" constant="12" id="rTe-yh-ZiX"/>
                                                 <constraint firstItem="vDN-02-Pcp" firstAttribute="top" secondItem="NGo-ye-EaJ" secondAttribute="bottom" constant="5" id="uML-ei-6eV"/>
                                             </constraints>
                                         </tableViewCellContentView>
@@ -117,7 +117,11 @@
                         <viewLayoutGuide key="safeArea" id="402-YK-niZ"/>
                     </view>
                     <navigationItem key="navigationItem" id="1np-G2-iBq">
-                        <barButtonItem key="rightBarButtonItem" title="Logout" id="Rn9-4W-JVf"/>
+                        <barButtonItem key="rightBarButtonItem" title="Logout" id="Rn9-4W-JVf">
+                            <connections>
+                                <action selector="pressedLogout:" destination="dWC-G0-was" id="kTW-Fw-uBW"/>
+                            </connections>
+                        </barButtonItem>
                     </navigationItem>
                     <connections>
                         <outlet property="dashboardTableView" destination="qE1-mo-grC" id="Yw4-lz-7uB"/>

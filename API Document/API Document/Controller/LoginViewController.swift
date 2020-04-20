@@ -17,7 +17,6 @@ class LoginViewController: UIViewController {
         super.viewDidLoad()
     }
     
-    
     @IBAction func pressedLogin(_ sender: Any) {
         apiManager.postLogin { [weak self] loginResponse in
             switch loginResponse {
