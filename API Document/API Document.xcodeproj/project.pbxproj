@@ -21,6 +21,7 @@
 		413D8DE9244D736900CA8D11 /* DashboardPageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 413D8DE8244D736900CA8D11 /* DashboardPageViewController.swift */; };
 		413D8DEB244D738E00CA8D11 /* DetailPageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 413D8DEA244D738E00CA8D11 /* DetailPageViewController.swift */; };
 		413D8DEE244D745100CA8D11 /* DashBoardPageTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 413D8DED244D745100CA8D11 /* DashBoardPageTableViewCell.swift */; };
+		413D8DF0244D834900CA8D11 /* APIManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 413D8DEF244D834900CA8D11 /* APIManager.swift */; };
 		B190F06BC58CA57BF8654017 /* Pods_API_DocumentTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 98E5205B0E89921ED98F7336 /* Pods_API_DocumentTests.framework */; };
 		E3C0BEE69A994EF7D938708C /* Pods_API_Document_API_DocumentUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BD1778F8D1B21E1FBF6BC9F9 /* Pods_API_Document_API_DocumentUITests.framework */; };
 /* End PBXBuildFile section */
@@ -62,6 +63,7 @@
 		413D8DE8244D736900CA8D11 /* DashboardPageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DashboardPageViewController.swift; sourceTree = "<group>"; };
 		413D8DEA244D738E00CA8D11 /* DetailPageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailPageViewController.swift; sourceTree = "<group>"; };
 		413D8DED244D745100CA8D11 /* DashBoardPageTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DashBoardPageTableViewCell.swift; sourceTree = "<group>"; };
+		413D8DEF244D834900CA8D11 /* APIManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIManager.swift; sourceTree = "<group>"; };
 		53F8E5AE0646A3979694BCF7 /* Pods-API DocumentTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-API DocumentTests.debug.xcconfig"; path = "Target Support Files/Pods-API DocumentTests/Pods-API DocumentTests.debug.xcconfig"; sourceTree = "<group>"; };
 		915D7A90C9EA5A82394E2240 /* Pods-API DocumentTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-API DocumentTests.release.xcconfig"; path = "Target Support Files/Pods-API DocumentTests/Pods-API DocumentTests.release.xcconfig"; sourceTree = "<group>"; };
 		98E5205B0E89921ED98F7336 /* Pods_API_DocumentTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_API_DocumentTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -201,6 +203,7 @@
 		413D8DEC244D742700CA8D11 /* Service */ = {
 			isa = PBXGroup;
 			children = (
+				413D8DEF244D834900CA8D11 /* APIManager.swift */,
 			);
 			path = Service;
 			sourceTree = "<group>";
@@ -457,6 +460,7 @@
 				413D8DE3244D6CA100CA8D11 /* LoginPage.swift in Sources */,
 				413D8DB6244D652B00CA8D11 /* LoginPageViewController.swift in Sources */,
 				413D8DE9244D736900CA8D11 /* DashboardPageViewController.swift in Sources */,
+				413D8DF0244D834900CA8D11 /* APIManager.swift in Sources */,
 				413D8DB2244D652B00CA8D11 /* AppDelegate.swift in Sources */,
 				413D8DEB244D738E00CA8D11 /* DetailPageViewController.swift in Sources */,
 				413D8DB4244D652B00CA8D11 /* SceneDelegate.swift in Sources */,

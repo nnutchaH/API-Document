@@ -9,7 +9,7 @@
 import Foundation
 
 struct Login: Codable {
-    let customer: [Customer]
+    let customers: [Customer]
     let status: Int
     let token: String
 }
