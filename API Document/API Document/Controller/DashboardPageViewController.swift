@@ -10,6 +10,8 @@ import UIKit
 
 class DashboardPageViewController: UIViewController {
     
+    @IBOutlet weak var dashboardTableView: UITableView!
+    
     var loginData: Login!
     
     override func viewDidLoad() {
@@ -17,7 +19,13 @@ class DashboardPageViewController: UIViewController {
         navigationItem.hidesBackButton = true
     }
     
-    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        let destinationViewController = segue.destination as? DetailPageViewController
+        let selectedCustomerAtIndex = dashboardTableView.indexPathForSelectedRow?.row
+        
+        destinationViewController?.loginData = loginData
+        destinationViewController?.customerData = loginData.customers[selectedCustomerAtIndex!]
+    }
     
 }
 

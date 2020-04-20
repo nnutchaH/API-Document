@@ -17,7 +17,7 @@
 		413D8DC9244D652C00CA8D11 /* API_DocumentTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 413D8DC8244D652C00CA8D11 /* API_DocumentTests.swift */; };
 		413D8DD4244D652C00CA8D11 /* API_DocumentUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 413D8DD3244D652C00CA8D11 /* API_DocumentUITests.swift */; };
 		413D8DE3244D6CA100CA8D11 /* LoginPage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 413D8DE2244D6CA100CA8D11 /* LoginPage.swift */; };
-		413D8DE5244D6CAB00CA8D11 /* ModelPage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 413D8DE4244D6CAB00CA8D11 /* ModelPage.swift */; };
+		413D8DE5244D6CAB00CA8D11 /* DetailPage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 413D8DE4244D6CAB00CA8D11 /* DetailPage.swift */; };
 		413D8DE9244D736900CA8D11 /* DashboardPageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 413D8DE8244D736900CA8D11 /* DashboardPageViewController.swift */; };
 		413D8DEB244D738E00CA8D11 /* DetailPageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 413D8DEA244D738E00CA8D11 /* DetailPageViewController.swift */; };
 		413D8DEE244D745100CA8D11 /* DashBoardPageTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 413D8DED244D745100CA8D11 /* DashBoardPageTableViewCell.swift */; };
@@ -59,7 +59,7 @@
 		413D8DD3244D652C00CA8D11 /* API_DocumentUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = API_DocumentUITests.swift; sourceTree = "<group>"; };
 		413D8DD5244D652C00CA8D11 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		413D8DE2244D6CA100CA8D11 /* LoginPage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginPage.swift; sourceTree = "<group>"; };
-		413D8DE4244D6CAB00CA8D11 /* ModelPage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModelPage.swift; sourceTree = "<group>"; };
+		413D8DE4244D6CAB00CA8D11 /* DetailPage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailPage.swift; sourceTree = "<group>"; };
 		413D8DE8244D736900CA8D11 /* DashboardPageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DashboardPageViewController.swift; sourceTree = "<group>"; };
 		413D8DEA244D738E00CA8D11 /* DetailPageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailPageViewController.swift; sourceTree = "<group>"; };
 		413D8DED244D745100CA8D11 /* DashBoardPageTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DashBoardPageTableViewCell.swift; sourceTree = "<group>"; };
@@ -176,7 +176,7 @@
 			isa = PBXGroup;
 			children = (
 				413D8DE2244D6CA100CA8D11 /* LoginPage.swift */,
-				413D8DE4244D6CAB00CA8D11 /* ModelPage.swift */,
+				413D8DE4244D6CAB00CA8D11 /* DetailPage.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -465,7 +465,7 @@
 				413D8DEB244D738E00CA8D11 /* DetailPageViewController.swift in Sources */,
 				413D8DB4244D652B00CA8D11 /* SceneDelegate.swift in Sources */,
 				413D8DEE244D745100CA8D11 /* DashBoardPageTableViewCell.swift in Sources */,
-				413D8DE5244D6CAB00CA8D11 /* ModelPage.swift in Sources */,
+				413D8DE5244D6CAB00CA8D11 /* DetailPage.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

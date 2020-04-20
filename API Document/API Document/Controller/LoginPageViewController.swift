@@ -31,7 +31,6 @@ class LoginViewController: UIViewController {
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        
         let destinationViewController = segue.destination as? DashboardPageViewController
         destinationViewController?.loginData = loginData
     }
